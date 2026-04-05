@@ -213,7 +213,10 @@ header { visibility: hidden; }
 # ── Load Model ──────────────────────────────────────────────
 @st.cache_resource
 def load_model():
-    with open(r'C:\Users\Savita\Desktop\customer_churn_project\models\best_model.pkl', 'rb') as f:
+    import os
+    base = os.path.dirname(os.path.abspath(__file__))
+    model_path = os.path.join(base, 'models', 'best_model.pkl')
+    with open(model_path, 'rb') as f:
         model = pickle.load(f)
     return model
 
