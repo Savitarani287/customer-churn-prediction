@@ -207,6 +207,24 @@ div[data-testid="stButton"] button {
 footer { visibility: hidden; }
 #MainMenu { visibility: hidden; }
 header { visibility: hidden; }
+/* Mobile dropdown fix */
+.stSelectbox > div > div > div {
+    color: #000000 !important;
+    font-size: 1rem !important;
+}
+
+select option {
+    color: #000000 !important;
+    background: white !important;
+}
+
+[data-baseweb="select"] span {
+    color: #000000 !important;
+}
+
+[data-baseweb="select"] div {
+    color: #000000 !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
